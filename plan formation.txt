@@ -1,0 +1,50 @@
+Présentation de .NET
+Les langages du framework .NET
+Particularités du C#
+Evolutions du C#, plateformes supportées 
+Environnement de développement
+Types de projets : console, bibliothèque, WinForms, WPF, WCF,...
+Structure minimale d'un programme C# 
+Compilation, exécution et débogage
+
+
+Variables : déclaration, types communs (Common Type System)
+Organisation en mémoire (types primitifs / types références) 
+Opérateurs
+Conversion de types : transtypage implicite / explicite 
+Instructions conditionnelles
+Instructions d'itération, les boucles
+
+
+Principe de fonctionnement
+Création de tableaux quelconques
+Tableaux multidimensionnels et parcours
+
+
+Introduction au procédural : définition, intérêt
+Types et retours de fonctions
+Passage de paramètres : 
+- par valeur 
+- par référence : (ref, out)
+- arguments variables (params) 
+Surcharge de méthodes 
+Récursivité : définition, implémentation
+
+
+Mécanisme d'exceptions, types 
+Capturer et traiter une exception (try/catch/finally) 
+Déclenchement d'exceptions (throw)
+
+
+Notions sur les classes 
+Les chaînes de caractères, les dates,...
+Les listes et collections diverses, algorithmes
+L'accès aux fichiers et les flux
+
+
+
+WinForms : présention, composants et affichages
+Structure d'un projet, références 
+Création de fenêtres
+Utilisation de contrôles et gestion des évènements 
+Organisation de l'application
