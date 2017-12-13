@@ -46,6 +46,8 @@ namespace R2D2pret
             listInt2.Add(10);
             listInt2.Add(20);
 
+            
+
             foreach (var item in listInt)
             {
                 Console.WriteLine("4. List<int> " + item);
