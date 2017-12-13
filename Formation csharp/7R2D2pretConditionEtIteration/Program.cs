@@ -88,8 +88,71 @@ namespace R2D2pret
             }
 
 
+            if(5 == 4)
+            {
+                Console.WriteLine("9 => 1");
+            } 
+            else if(10/2 == 5 )
+            {
+                Console.WriteLine("9 => 2");
+            }
+            else
+            {
+                Console.WriteLine("9 => 3");
+            }
+
+
+
             // Cas des énumération
             // TODO: 13/12/2017, finir le cas des énum + le switch case
+            enumATroisValeurs valeur = enumATroisValeurs.Etat1;
+            switch (valeur)
+            {
+                case enumATroisValeurs.Etat1:
+                    Console.WriteLine("10 => Etat 1");
+                    break;
+                case enumATroisValeurs.Etat2:
+                    Console.WriteLine("10 => Etat 2");
+                    break;
+                case enumATroisValeurs.Etat3:
+                    Console.WriteLine("10 => Etat 3");
+                    break;
+                default:
+                    break;
+            }
+
+            // Enum peut aussi prendre plusieurs valeurs en une seule (notion de byte)
+            valeur = enumATroisValeurs.Etat3 | enumATroisValeurs.Etat2;
+            switch (valeur)
+            {
+                case enumATroisValeurs.Etat1:
+                    Console.WriteLine("11 => Etat 1");
+                    break;
+                case enumATroisValeurs.Etat2:
+                    Console.WriteLine("11 => Etat 2");
+                    break;
+                case enumATroisValeurs.Etat3 | enumATroisValeurs.Etat2:
+                    Console.WriteLine("11 => Etat 3 ou deux");
+                    break;
+                default:
+                    break;
+            }
+
+            valeur = enumATroisValeurs.Etat3 & enumATroisValeurs.Etat2;
+            switch (valeur)
+            {
+                case enumATroisValeurs.Etat1:
+                    Console.WriteLine("12 => Etat 1");
+                    break;
+                case enumATroisValeurs.Etat2:
+                    Console.WriteLine("12 => Etat 2");
+                    break;
+                case enumATroisValeurs.Etat3 & enumATroisValeurs.Etat2:
+                    Console.WriteLine("12 => Etat 3 et deux");
+                    break;
+                default:
+                    break;
+            }
 
             Console.ReadLine();
         }
