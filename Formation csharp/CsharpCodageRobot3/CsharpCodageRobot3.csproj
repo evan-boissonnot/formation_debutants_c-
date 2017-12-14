@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{004F550F-2C7D-46DA-88AF-71E77D116461}</ProjectGuid>
+    <ProjectGuid>{017D0CB9-E214-4E84-A964-C5647017CB9F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>CsharpCodageRobot2</RootNamespace>
     <AssemblyName>CsharpCodageRobot2</AssemblyName>

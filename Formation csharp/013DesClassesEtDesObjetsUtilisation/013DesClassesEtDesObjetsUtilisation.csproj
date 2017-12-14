@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{004F550F-2C7D-46DA-88AF-71E77D116461}</ProjectGuid>
+    <ProjectGuid>{B1FAA032-32AA-42A1-AC81-D8496D686AD5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CsharpCodageRobot2</RootNamespace>
-    <AssemblyName>CsharpCodageRobot2</AssemblyName>
+    <RootNamespace>_012DesClassesEtDesObjets</RootNamespace>
+    <AssemblyName>_012DesClassesEtDesObjets</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionType.cs" />
+    <Compile Include="MonRobot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
