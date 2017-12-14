@@ -27,7 +27,7 @@ namespace _012DesClassesEtDesObjets
 
             robot.SeDeplacer(1, 1);
             robot.AfficherPositionnement();
-            robot5.AfficherPositionnement();
+            robot5.AfficherPositionnement(); // c'est le même robot en fait
 
             List<MonRobot> robotList = new List<MonRobot>();
 
@@ -41,6 +41,7 @@ namespace _012DesClassesEtDesObjets
                 });
             }
 
+            int j = 0;
             while(true)
             {
                 robotList.ForEach(item =>
@@ -51,9 +52,18 @@ namespace _012DesClassesEtDesObjets
 
                     Thread.Sleep(100);
                 });
+
+                j++;
+                if (j % 2 == 0)
+                    robotList.ForEach(item => Reinitialiser(item));
             }
 
             Console.ReadLine();
+        }
+
+        static void Reinitialiser(MonRobot robot) // Copie de la référence, pas des valeurs
+        {
+            robot.SeDeplacer(0, 0);
         }
 
         static Tuple<int, int> RetourneNouvellesCoordonnees()
