@@ -55,7 +55,11 @@ namespace _012DesClassesEtDesObjets
 
                 j++;
                 if (j % 2 == 0)
-                    robotList.ForEach(item => Reinitialiser(item));
+                    robotList.ForEach(item => {
+                        Console.WriteLine("Avant : Taille du robot " + item.Nom + " : " + item.Taille);
+                        Reinitialiser(item);
+                        Console.WriteLine("Après : Taille du robot " + item.Nom + " : " + item.Taille);
+                    });
             }
 
             Console.ReadLine();
@@ -63,6 +67,7 @@ namespace _012DesClassesEtDesObjets
 
         static void Reinitialiser(MonRobot robot) // Copie de la référence, pas des valeurs
         {
+            robot.Taille = (new Random()).Next(0, 100);
             robot.SeDeplacer(0, 0);
         }
 

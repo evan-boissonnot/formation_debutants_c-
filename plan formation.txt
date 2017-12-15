@@ -43,6 +43,9 @@ L'accès aux fichiers et les flux
 
 
 
+________________________
+Pas important : 
+
 WinForms : présention, composants et affichages
 Structure d'un projet, références 
 Création de fenêtres
