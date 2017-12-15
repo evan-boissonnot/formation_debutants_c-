@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE65811B-9E4B-49F7-8B97-FD851BA17358}</ProjectGuid>
+    <ProjectGuid>{D5ECBF56-F1A3-444F-B14B-4682C07F09F2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>LattaqueDesClones</RootNamespace>
     <AssemblyName>LattaqueDesClones</AssemblyName>
@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LesRobots\LesRobots.csproj">
-      <Project>{86743691-1639-4f8f-a0bb-bd6c8ad1ef15}</Project>
-      <Name>LesRobots</Name>
+    <ProjectReference Include="..\LesRobots2\LesRobots2.csproj">
+      <Project>{b9f4e042-9782-4f1a-886a-b472562d67e9}</Project>
+      <Name>LesRobots2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
