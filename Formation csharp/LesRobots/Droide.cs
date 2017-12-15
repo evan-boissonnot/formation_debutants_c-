@@ -28,7 +28,7 @@ namespace LesRobots
             this.CoordonneeX = deplacementX * COEFFICIENT;
             this.CoordonneeY = deplacementY * COEFFICIENT;
 
-            Console.WriteLine("Surcharge");
+            this.VerifierCoordonnees();
         }
 
         public override string ToString()
