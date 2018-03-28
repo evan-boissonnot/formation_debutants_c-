@@ -10,6 +10,8 @@ namespace R2D2pret
     {
         static void Main(string[] args)
         {
+            // ceci est
+
             Console.WriteLine("Je suis R2D2, prêt pour le combat");
             Console.ReadLine();
         }

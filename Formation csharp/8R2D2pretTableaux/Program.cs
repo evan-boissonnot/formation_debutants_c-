@@ -53,6 +53,7 @@ namespace R2D2pret
             Console.WriteLine("11. Valeur avant : " + value + ", après : " + unSecondTableauUneDimension[2]);
 
 
+            int[,,] tableauAtroisDimensions = new int[1,2];
 
             // Tableau N dimensions
             int[,,] tableauAtroisDimensions;
@@ -159,7 +160,7 @@ namespace R2D2pret
             {
                 new int[] {1, 2, 3},
                 new int[] {5, 6, 7, 8},
-                new int[] {9, 10 },
+                new int[] {9, 10},
             };
 
             for (int i = 0; i < unTableauDeTableau.Length; i++)
