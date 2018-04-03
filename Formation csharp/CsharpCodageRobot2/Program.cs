@@ -10,11 +10,24 @@ namespace CsharpCodageRobot2
     {
         static void Main(string[] args)
         {
+            Dictionary<ActionType, string> traduction = new Dictionary<ActionType, string>
+            {
+                { ActionType.askBirthday, "Demande de la date de naissance" },
+                { ActionType.askName, "Demande du nom" },
+                { ActionType.computeAverage10Number, "Moyenne des 10 chiffres" },
+                { ActionType.computeSum10Number, "Saisie et somme des 10 chiffres" },
+                { ActionType.displaymenu, "Affichage du menu" },
+                { ActionType.exit, "Sortie du menu" },
+                { ActionType.historic, "Affichage de l'historique" }
+            };
+
             const int MAX_LIST = 10;
             ActionType type = ActionType.displaymenu;
             string name = string.Empty;
             DateTime birthDay = DateTime.Now;
             List<int> list = new List<int>();
+
+
             Dictionary<DateTime, ActionType> actionHistoryList = new Dictionary<DateTime, ActionType>();
 
             while(type != ActionType.exit)
@@ -46,7 +59,12 @@ namespace CsharpCodageRobot2
 
                             var names = Enum.GetNames(typeof(ActionType));
                             foreach (var key in names)
-                                Console.WriteLine(string.Format("{0} : {1}", (int)Enum.Parse(typeof(ActionType), key), key));
+                            {
+                                ActionType currentAction = (ActionType)Enum.Parse(typeof(ActionType), key);
+                                string translate = traduction[currentAction]; 
+                                Console.WriteLine(string.Format("{0} : {1}", (int)currentAction, translate));
+
+                            }
                         }
                         break;
                     case ActionType.askName:
@@ -68,7 +86,7 @@ namespace CsharpCodageRobot2
                                 if (DateTime.TryParse(birthdayValue, out birthDay))
                                 {
                                     validDate = true;
-                                    Console.WriteLine(string.Format("Votre date de naissance est : {0:dd/MM/yyyy}", birthDay));
+                                    Console.WriteLine(string.Format("Votre date de naissance est : {0:HH:mm:ss, le dd/MM/yyyy}", birthDay));
                                 }
                                 else
                                 {
@@ -81,6 +99,8 @@ namespace CsharpCodageRobot2
                     case ActionType.computeSum10Number:
                         {
                             list.Clear();
+                            
+
                             int i = 0;
                             while(i < MAX_LIST)
                             {
