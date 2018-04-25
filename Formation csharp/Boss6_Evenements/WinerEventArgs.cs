@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Boss6_Evenements
 {
-    public partial class Form1 : Form
+    public class WinerEventArgs : EventArgs
     {
-
-        
+        public Robot Winer { get; set; }
     }
 }

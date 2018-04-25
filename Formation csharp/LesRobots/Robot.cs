@@ -75,7 +75,7 @@ namespace LesRobots
         {
             if (robot.CoordonneeX == this.CoordonneeX &&
                robot.CoordonneeY == this.CoordonneeY &&
-               this.EstVivant)
+               this.EstVivant  && robot.EstVivant)
             {
 
                 //Console.WriteLine(string.Format("Une attaque a lieu entre {0} et {1}", this.Nom, robot.Nom));

@@ -25,22 +25,24 @@ namespace LattaqueDesClones
         {
             Random rand = new Random();
 
-            while (robotList.Any(item => item.EstVivant))
+            while (robotList.Count(item => item.EstVivant) > 1)
             {
-                var listVivants = robotList.Where(item => item.EstVivant).ToList();
-
-                listVivants.ForEach(robot => {
+                foreach(var robot in robotList)
+                { 
                     int x = rand.Next(1, MAX_X);
                     int y = rand.Next(1, MAX_Y);
 
                     robot.SeDeplacer(x, y);
 
-                    foreach (var rob in listVivants.Where(item => item.Nom != robot.Nom && item.EstAuBonEndroit(robot))) // Le code peut être amélioré ici
+                    foreach (var rob in robotList) // Le code peut être amélioré ici
                     {
-                        robot.Attaquer(rob);
+                        if (robot.Nom != rob.Nom && robot.EstAuBonEndroit(rob))
+                        {
+                            robot.Attaquer(rob);
+                        }
                         Thread.Sleep(100);
                     }
-                });
+                };
                 AfficherRobots(robotList);
                 Thread.Sleep(1000);
             }
